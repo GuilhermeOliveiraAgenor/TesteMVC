@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MercadoMVC", "MercadoMVC\MercadoMVC.csproj", "{2482708F-5BD1-4A5D-9F79-9A223F2E3EC2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteMVC", "MercadoMVC\TesteMVC.csproj", "{2482708F-5BD1-4A5D-9F79-9A223F2E3EC2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

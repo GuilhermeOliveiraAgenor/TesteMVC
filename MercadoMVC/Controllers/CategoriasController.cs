@@ -12,7 +12,7 @@ namespace MercadoMVC.Controllers
 {
     public class CategoriasController : Controller
     {
-        private MercadoEntities2 banco = new MercadoEntities2();
+        private TesteMVCEntities banco = new TesteMVCEntities();
 
         // GET: Categorias
         public ActionResult Index()

@@ -134,25 +134,22 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Categoria.cs">
-      <DependentUpon>Mercado.tt</DependentUpon>
+      <DependentUpon>TesteMVC1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Mercado.Context.cs">
+    <Compile Include="Models\TesteMVC1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Mercado.Context.tt</DependentUpon>
+      <DependentUpon>TesteMVC1.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Mercado.cs">
+    <Compile Include="Models\TesteMVC1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Mercado.tt</DependentUpon>
+      <DependentUpon>TesteMVC1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Mercado.Designer.cs">
+    <Compile Include="Models\TesteMVC1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Mercado.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Produto.cs">
-      <DependentUpon>Mercado.tt</DependentUpon>
+      <DependentUpon>TesteMVC1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -165,24 +162,24 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\Mercado.Context.tt">
+    <Content Include="Models\TesteMVC1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Mercado.edmx</DependentUpon>
-      <LastGenOutput>Mercado.Context.cs</LastGenOutput>
+      <DependentUpon>TesteMVC1.edmx</DependentUpon>
+      <LastGenOutput>TesteMVC1.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\Mercado.tt">
+    <Content Include="Models\TesteMVC1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Mercado.edmx</DependentUpon>
-      <LastGenOutput>Mercado.cs</LastGenOutput>
+      <DependentUpon>TesteMVC1.edmx</DependentUpon>
+      <LastGenOutput>TesteMVC1.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\Mercado.edmx">
+    <EntityDeploy Include="Models\TesteMVC1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Mercado.Designer.cs</LastGenOutput>
+      <LastGenOutput>TesteMVC1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\Mercado.edmx.diagram">
-      <DependentUpon>Mercado.edmx</DependentUpon>
+    <Content Include="Models\TesteMVC1.edmx.diagram">
+      <DependentUpon>TesteMVC1.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\CadastroJS.js" />
