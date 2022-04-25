@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MercadoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Categoria">
+    <Key>
+      <PropertyRef Name="idCategoria" />
+    </Key>
+    <Property Name="idCategoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descricao" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Produto" Relationship="Self.FK__Produto__categor__267ABA7A" FromRole="Categoria" ToRole="Produto" />
+  </EntityType>
+  <EntityType Name="Produto">
+    <Key>
+      <PropertyRef Name="idProduto" />
+    </Key>
+    <Property Name="idProduto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Preco" Type="Decimal" Precision="6" Scale="2" />
+    <Property Name="categoriaProduto" Type="Int32" />
+    <NavigationProperty Name="Categoria" Relationship="Self.FK__Produto__categor__267ABA7A" FromRole="Produto" ToRole="Categoria" />
+  </EntityType>
+  <Association Name="FK__Produto__categor__267ABA7A">
+    <End Role="Categoria" Type="Self.Categoria" Multiplicity="0..1" />
+    <End Role="Produto" Type="Self.Produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categoria">
+        <PropertyRef Name="idCategoria" />
+      </Principal>
+      <Dependent Role="Produto">
+        <PropertyRef Name="categoriaProduto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MercadoEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Categoria" EntityType="Self.Categoria" />
+    <EntitySet Name="Produto" EntityType="Self.Produto" />
+    <AssociationSet Name="FK__Produto__categor__267ABA7A" Association="Self.FK__Produto__categor__267ABA7A">
+      <End Role="Categoria" EntitySet="Categoria" />
+      <End Role="Produto" EntitySet="Produto" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

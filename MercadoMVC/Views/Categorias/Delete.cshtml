@@ -1,0 +1,34 @@
+﻿@model MercadoMVC.Models.Categoria
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Deletar Categoria</h2>
+<br>
+<h3>Você deseja excluir ?</h3>
+<br>
+<div>
+    <h4>Categoria</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger"/>
+            @Html.ActionLink("Voltar para a lista", "Index")
+        </div>
+    }
+    <script src="~/Scripts/CadastroJS.js"></script>
+</div>

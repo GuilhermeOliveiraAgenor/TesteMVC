@@ -1,0 +1,44 @@
+﻿@model IEnumerable<MercadoMVC.Models.Categoria>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Menu</h2>
+@if(TempData["AlertMessage"] != null)
+{
+<div class="alert alert-success">
+    <strong>@TempData["AlertMessage"]</strong>
+    <button type="button" class="close" data-dismiss="alert">
+        <span>&times;</span>
+        @*<span>x</span>*@
+    </button>
+</div>
+}
+<p>
+    @Html.ActionLink("Cadastrar", "Create")
+</p>
+<table class="table table-hover table-responsive">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </th>   
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.idCategoria }, new { @class = "btn btn-primary" }) |<!--Acrescenta estilo no botão-->
+                @Html.ActionLink("Detalhes", "Details", new { id = item.idCategoria }, new { @class = "btn btn-success" }) |
+                @Html.ActionLink("Excluir", "Delete", new { id = item.idCategoria }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+        <script src="~/Scripts/CadastroJS.js"></script>
+    }
+
+</table>

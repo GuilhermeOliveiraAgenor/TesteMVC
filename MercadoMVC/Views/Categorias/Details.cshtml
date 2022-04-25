@@ -1,0 +1,26 @@
+﻿@model MercadoMVC.Models.Categoria
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes</h2>
+<br>
+<div>
+    <h4>Categoria</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.idCategoria }, new {@class = "btn btn-info"}) |
+    @Html.ActionLink("Voltar para a lista", "Index")
+</p>
